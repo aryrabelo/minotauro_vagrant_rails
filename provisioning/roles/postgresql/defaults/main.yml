@@ -17,26 +17,26 @@ postgresql_ext_install_postgis: yes
 postgresql_ext_postgis_version: "2.1" # be careful: check whether the postgresql/postgis versions work together
 
 
-postgresql_default_master_user: minotauro
-postgresql_default_master_pass: minotauro
+postgresql_default_master_user: soprojetos
+postgresql_default_master_pass: soprojetos
 
 
 # List of databases to be created (optional)
 postgresql_databases:
-  - name: vagrant
+  - name: soprojetos_development
     hstore: yes         # flag to install the hstore extension on this database (yes/no)
     uuid_ossp: yes
 
 # List of users to be created (optional)
 postgresql_users:
-  - name: vagrant
-    pass: vagrant
+  - name: soprojetos
+    pass: soprojetos
     encrypted: no
 
 # List of user privileges to be applied (optional)
 postgresql_user_privileges:
-  - name: vagrant          # user name
-    db: vagrant         # database
+  - name: soprojetos          # user name
+    db: soprojetos_development         # database
     priv: "ALL"
 
 # pg_hba.conf
