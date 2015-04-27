@@ -10,6 +10,6 @@
     - { role: mysql, tags: ['mysql'] }
     - { role: postgresql, tags: ['postgresql'] }
     - { role: mongodb, tags: ['mongodb'] }
-    - { role: ruby, tags: ['ruby'] }
+    # - { role: ruby, tags: ['ruby'] }
     - { role: redis, tags: ['redis'] }
     - { role: elasticsearch, tags: ['elasticsearch'] }

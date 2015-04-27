@@ -6,6 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
+
     config.vm.define 'minotauro' do |machine|
       machine.vm.box = "ubuntu/trusty64"
       machine.vm.hostname = 'minotaurorailsbox'
@@ -32,6 +33,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         # Use VBoxManage to customize the VM. For example to change memory:
         v.customize ["modifyvm", :id, "--memory", "1024"]
         v.customize ["modifyvm", :id, "--cpuexecutioncap", "95"]
+        v.customize ["modifyvm", :id, "--natdnsproxy1", "off"]
+        v.customize ["modifyvm", :id, "--natdnshostresolver1", "off"]
       end
     end
 
