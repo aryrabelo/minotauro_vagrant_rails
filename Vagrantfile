@@ -12,6 +12,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       machine.vm.hostname = 'minotaurorailsbox'
       machine.vm.network "private_network", ip: "10.0.10.50"
       machine.vm.network "forwarded_port", guest: 3000, host: 3000
+      machine.vm.network "forwarded_port", guest: 8888, host: 8888
+      machine.vm.network "forwarded_port", guest: 1080, host: 1080
+      machine.vm.network "forwarded_port", guest: 1025, host: 1025
 
       # Share an additional folder to the guest VM. The first argument is
       # the path on the host to the actual folder. The second argument is
